@@ -16,23 +16,22 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-/**
- *
- * @author CRISTIAN
- */
+
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "cliente")
+@Table(name = "pedido")
 @Entity
-public class Cliente implements Serializable{
+public class Pedido implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idcliente;
+    private int idpedido;
     @Column(unique=true)
-    private String nombre; 
-    private int clientes;
-    private String jalados;
-    private int notas;
+    private String cliente; 
+    private String fecha_pedido;
+    private String reparto;
+    private String producto;
+    private int cantidad;
+    private int precio;
 }

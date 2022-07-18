@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  *
- * @author CRISTIAN
+ * @author JORDY
  * @param <T>
  */
 public interface Operaciones<T> {

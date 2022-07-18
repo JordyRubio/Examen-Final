@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns:th="http://www.thymeleaf.org"
-     >
+<html xmlns:th="http://www.thymeleaf.org">
     <head th:replace="layout/layout :: head">
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
@@ -11,26 +10,36 @@
         <div class="container" layout:fragment="page-content"> 
             <h2 th:text="${titulo}" class="mt-3"></h2>
             <hr>
-            <form th:action="@{/prod/add}" method="post" enctype="multipart/form-data" th:object="${cliente}">                    
+            <form th:action="@{/prod/add}" method="post" enctype="multipart/form-data" th:object="${pedido}">                    
                 <div class="mb-3">
-                    <input type="hidden" th:field="*{idcliente}">
-                    <label for="recipient-name" class="col-form-label">Nombre:</label>
-                    <input type="text" th:field="*{nombre}" class="form-control" name="nombre">
+                    <input type="hidden" th:field="*{idpedido}">
+                    <label for="recipient-name" class="col-form-label">cliente:</label>
+                    <input type="text" th:field="*{cliente}" class="form-control" name="cliente">
                 </div>
                  <div class="mb-3">
-                    <input type="hidden" th:field="*{idcliente}">
-                    <label for="recipient-name" class="col-form-label">Clientes:</label>
-                    <input type="text" th:field="*{clientes}" class="form-control" name="nombre">
+                    <input type="hidden" th:field="*{idpedido}">
+                    <label for="recipient-name" class="col-form-label">fecha:</label>
+                    <input type="date" th:field="*{fecha_pedido}" class="form-control" name="fecha">
                 </div>
                 <div class="mb-3">
-                    <input type="hidden" th:field="*{idcliente}">
-                    <label for="recipient-name" class="col-form-label">Jalados:</label>
-                    <input type="text" th:field="*{jalados}" class="form-control" name="nombre">
+                    <input type="hidden" th:field="*{idpedido}">
+                    <label for="recipient-name" class="col-form-label">reparto:</label>
+                    <input type="text" th:field="*{reparto}" class="form-control" name="reparto">
                 </div>
                 <div class="mb-3">
-                    <input type="hidden" th:field="*{idcliente}">
-                    <label for="recipient-name" class="col-form-label">Notas:</label>
-                    <input type="text" th:field="*{notas}" class="form-control" name="nombre">
+                    <input type="hidden" th:field="*{idpedido}">
+                    <label for="recipient-name" class="col-form-label">producto:</label>
+                    <input type="text" th:field="*{producto}" class="form-control" name="producto">
+                </div>
+                <div class="mb-3">
+                    <input type="hidden" th:field="*{idpedido}">
+                    <label for="recipient-name" class="col-form-label">cantidad:</label>
+                    <input type="text" th:field="*{cantidad}" class="form-control" name="cantidad">
+                </div>
+                <div class="mb-3">
+                    <input type="hidden" th:field="*{idpedido}">
+                    <label for="recipient-name" class="col-form-label">precio:</label>
+                    <input type="text" th:field="*{precio}" class="form-control" name="precio">
                 </div>
                 
                 
